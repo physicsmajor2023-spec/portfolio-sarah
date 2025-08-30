@@ -313,16 +313,20 @@
     
     <!-- معلومات التواصل -->
     <div class="space-y-4 text-gray-700">
-      <p><strong>Email:</strong> <a href="mailto:yourmail@email.com" class="text-blue-500 hover:underline">sarah.alsaleh@outlook.sa</a></p>
+      <p><strong>Email:</strong> <a href="mailto:sarah.alsaleh@outlook.sa" class="text-blue-500 hover:underline">sarah.alsaleh@outlook.sa</a></p>
       <p><strong>Instagram:</strong> <a href="https://instagram.com/yourusername" target="_blank" class="text-pink-500 hover:underline">@yourusername</a></p>
     </div>
 
-    <!-- أو نموذج رسالة -->
-<form action="https://formspree.io/f/mmnbdakn" method="GET" class="mt-10 space-y-4 max-w-xl mx-auto"> 
-  <input type="hidden" name="_next" value="https://physicsmajor2023-spec.github.io/portfolio-sarah/#contact">
-  <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-      <textarea name="message" rows="5" placeholder="Your Message" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+    <!-- نموذج رسالة -->
+    <form action="https://formspree.io/f/mmnbdakn" method="POST" class="mt-10 space-y-4 max-w-xl mx-auto">
+      <input type="hidden" name="_next" value="https://physicsmajor2023-spec.github.io/portfolio-sarah/#contact">
+      
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+      
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+      
+      <textarea name="message" rows="5" placeholder="Your Message" class="w-full p-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required></textarea>
+      
       <button type="submit" class="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Send Message</button>
     </form>
   </div>
@@ -334,6 +338,7 @@
     © 2025 Sarah Alsaleh · All Rights Reserved
   </div>
 </footer>
+
 
 
 
