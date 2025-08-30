@@ -365,38 +365,47 @@
   </div>
 </section>
 
-<!-- رسالة التأكيد -->
+<!-- Your contact form -->
+<form id="contact-form" action="https://formspree.io/f/mnnbdakn" method="POST" class="...">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<!-- Success message -->
 <p id="success-message" class="text-green-500 font-medium mt-4 hidden">
-  تم إرسال رسالتك بنجاح! سنرد عليك قريبًا.
+  Your message has been sent successfully! We will get back to you soon.
 </p>
 
 <script>
-  const form = document.querySelector('form[action="https://formspree.io/f/mnnbdakn"]');
-  const successMessage = document.getElementById('success-message');
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // منع الإرسال التقليدي
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // Prevent default submission
 
-    const formData = new FormData(form);
+  const formData = new FormData(form);
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
 
-      if (response.ok) {
-        successMessage.classList.remove('hidden'); // إظهار الرسالة
-        form.reset(); // إعادة تعيين الحقول
-      } else {
-        alert('حدث خطأ أثناء الإرسال. حاول مرة أخرى.');
-      }
-    } catch (error) {
-      alert('حدث خطأ أثناء الإرسال. حاول مرة أخرى.');
+    if (response.ok) {
+      successMessage.classList.remove('hidden'); // Show success message
+      form.reset(); // Reset form fields
+    } else {
+      alert('There was an error sending your message. Please try again.');
     }
-  });
+  } catch (error) {
+    alert('There was an error sending your message. Please try again.');
+  }
+});
 </script>
+
 
 
 <!-- FOOTER -->
@@ -405,6 +414,7 @@
     © 2025 Sarah Alsaleh · All Rights Reserved
   </div>
 </footer>
+
 
 
 
