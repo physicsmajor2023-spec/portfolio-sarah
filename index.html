@@ -303,7 +303,7 @@
     </div>
   </div>
 </section>
-<!-- CONTACT -->
+<!-- قسم التواصل -->
 <section id="contact" class="py-20 px-6 bg-gradient-to-b from-white to-blue-50/30">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-4xl md:text-5xl font-light text-gray-800 mb-4">Contact Me</h2>
@@ -312,7 +312,7 @@
       I’d love to hear from you! Whether it’s about art, crafts, or collaborations.
     </p>
 
-    <!-- Contact Info -->
+    <!-- معلومات التواصل -->
     <div class="space-y-4 text-gray-700 mb-10">
       <p><strong>Email:</strong> 
         <a href="mailto:sarah.alsaleh@outlook.sa" class="text-blue-500 hover:underline">
@@ -326,10 +326,11 @@
       </p>
     </div>
 
-    <!-- Contact Form -->
+    <!-- نموذج الرسائل -->
     <form id="contact-form" action="https://formspree.io/f/mnnbdakn" method="POST" class="mt-10 space-y-6 max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+      <!-- إعادة التوجيه بعد الإرسال إذا أردت -->
       <input type="hidden" name="_next" value="https://physicsmajor2023-spec.github.io/portfolio-sarah/#contact">
-      
+
       <input 
         type="text" 
         name="name" 
@@ -362,7 +363,7 @@
       </button>
     </form>
 
-    <!-- Success Message -->
+    <!-- رسالة النجاح -->
     <p id="success-message" class="text-green-500 font-medium mt-6 text-center hidden">
       Your message has been sent successfully! We will get back to you soon.
     </p>
@@ -370,31 +371,31 @@
 </section>
 
 <script>
-const form = document.getElementById('contact-form');
-const successMessage = document.getElementById('success-message');
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // Prevent default submission
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // منع الإرسال التقليدي
 
-  const formData = new FormData(form);
+    const formData = new FormData(form);
 
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (response.ok) {
-      successMessage.classList.remove('hidden'); // Show success message
-      form.reset(); // Reset form fields
-    } else {
+      if (response.ok) {
+        successMessage.classList.remove('hidden'); // إظهار رسالة النجاح
+        form.reset(); // إعادة تعيين الحقول
+      } else {
+        alert('There was an error sending your message. Please try again.');
+      }
+    } catch (error) {
       alert('There was an error sending your message. Please try again.');
     }
-  } catch (error) {
-    alert('There was an error sending your message. Please try again.');
-  }
-});
+  });
 </script>
 
 
@@ -405,6 +406,7 @@ form.addEventListener('submit', async (e) => {
     © 2025 Sarah Alsaleh · All Rights Reserved
   </div>
 </footer>
+
 
 
 
