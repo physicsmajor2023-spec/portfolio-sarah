@@ -270,11 +270,11 @@
   <div class="max-w-6xl mx-auto px-6">
     <header class="mb-6">
       <h2 class="text-2xl font-bold">AI Ring Magazine</h2>
-      <p class="text-sm text-gray-600">عرض مباشر للكتاب داخل الموقع — قابل للتصفح أو الفتح في تبويب جديد.</p>
+      <p class="text-sm text-gray-600">Live preview of the flipbook inside the website — browsable or open in a new tab.</p>
     </header>
 
     <!-- responsive container for the flipbook -->
-    <div class="relative w-full" style="padding-top:66.6667%;"> <!-- 3:2 ratio; غيّر النسبة حسب الارتفاع المطلوب -->
+    <div class="relative w-full" style="padding-top:66.6667%;"> <!-- 3:2 ratio; adjust as needed -->
       <!-- iframe embed (primary) -->
       <iframe
         src="https://heyzine.com/flip-book/a918abc24b.html#page/1"
@@ -284,12 +284,12 @@
         style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
       ></iframe>
 
-      <!-- fallback overlay (يظهر لو لم يدعم المتصفح iframe أو لمن يريد فتح منفصل) -->
+      <!-- fallback overlay (appears if iframe not supported) -->
       <noscript>
         <div class="absolute inset-0 bg-gray-100 flex items-center justify-center p-6">
           <div class="text-center">
-            <p class="mb-3">لا يدعم متصفحك العرض المباشر للـ flipbook.</p>
-            <a class="inline-block px-4 py-2 bg-blue-600 text-white rounded" href="https://heyzine.com/flip-book/a918abc24b.html#page/1" target="_blank" rel="noopener noreferrer">افتح الكتاب في تبويب جديد</a>
+            <p class="mb-3">Your browser doesn’t support embedded flipbooks.</p>
+            <a class="inline-block px-4 py-2 bg-blue-600 text-white rounded" href="https://heyzine.com/flip-book/a918abc24b.html#page/1" target="_blank" rel="noopener noreferrer">Open the book in a new tab</a>
           </div>
         </div>
       </noscript>
@@ -298,10 +298,10 @@
     <!-- small controls -->
     <div class="mt-4 flex gap-3 items-center">
       <a class="text-sm text-blue-600 underline" href="https://heyzine.com/flip-book/a918abc24b.html#page/1" target="_blank" rel="noopener noreferrer">
-        افتح الكتاب في نافذة جديدة
+        Open the book in a new tab
       </a>
       <span class="text-xs text-gray-500">·</span>
-      <a class="text-sm text-gray-600" href="#flipbook" onclick="document.getElementById('flipbook').scrollIntoView({behavior:'smooth'})">رجوع للأعلى</a>
+      <a class="text-sm text-gray-600" href="#flipbook" onclick="document.getElementById('flipbook').scrollIntoView({behavior:'smooth'})">Back to top</a>
     </div>
   </div>
 </section>
@@ -447,6 +447,7 @@
     © 2025 Sarah Alsaleh · All Rights Reserved
   </div>
 </footer>
+
 
 
 
